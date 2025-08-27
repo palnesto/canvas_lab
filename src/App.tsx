@@ -80,7 +80,7 @@ export default function App() {
       <section className="mt-16 md:mt-24 text-center">
         {" "}
         <h2 className="text-4xl md:text-7xl font-bold mb-12">
-          OUR PROJECT
+          OUR PROJECTS
         </h2>{" "}
         <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-6 md:px-20">
           {" "}
@@ -139,10 +139,10 @@ export default function App() {
             How can we help you?
           </h3>
           <a
-            href="mailto:stanton@canvasslabs.world"
+            href="mailto:stanton@canvaslabs.world"
             className="mt-6 text-lg sm:text-xl md:text-4xl font-semibold   hover:decoration-white"
           >
-            stanton@canvasslabs.world
+            stanton@canvaslabs.world
           </a>
         </div>
       </section>
