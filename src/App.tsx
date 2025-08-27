@@ -14,11 +14,25 @@ export default function App() {
 
   // Ensure autoplay on mobile / no-hover devices
   useEffect(() => {
-    if (isNoHover && videoRef.current) {
-      videoRef.current.play().catch(() => {
-        /* ignore autoplay rejections */
-      });
-    }
+    const v = videoRef.current;
+    if (!v || !isNoHover) return;
+
+    const tryPlay = () => v.play().catch(() => {});
+    // try immediately + when metadata is ready
+    tryPlay();
+    v.addEventListener("loadedmetadata", tryPlay, { once: true });
+
+    // if browser blocks autoplay, start on first tap
+    const onFirstTouch = () => {
+      tryPlay();
+      window.removeEventListener("touchend", onFirstTouch);
+    };
+    window.addEventListener("touchend", onFirstTouch, { once: true });
+
+    return () => {
+      v.removeEventListener("loadedmetadata", tryPlay as any);
+      window.removeEventListener("touchend", onFirstTouch);
+    };
   }, [isNoHover]);
 
   // Hover controls (desktop)
