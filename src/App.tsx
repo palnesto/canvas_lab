@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef } from "react";
 
 export default function App() {
   const videoRef = useRef<HTMLVideoElement>(null);
