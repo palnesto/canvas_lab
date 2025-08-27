@@ -33,7 +33,7 @@ export default function App() {
     <div className="w-full min-h-screen font-sans">
       {/* ---------- Hero Section ---------- */}
       <section
-        className="relative w-full overflow-hidden h-[100svh] md:h-screen"
+        className="relative w-full overflow-hidden h-[50svh] md:h-screen"
         onMouseEnter={handleEnter}
         onMouseLeave={handleLeave}
       >
@@ -70,44 +70,67 @@ export default function App() {
         </h2>{" "}
         <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-6 md:px-20">
           {" "}
-          {/* First card */}{" "}
-          <div className="relative w-full md:w-1/2 h-100 rounded-4xl overflow-hidden shadow-lg ">
-            {" "}
+          {/* First card */} {/* First card → xpoll.io */}
+          <a
+            href="https://xpoll.io"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open xpoll.io"
+            className="relative block w-full md:w-1/2 h-100 rounded-4xl overflow-hidden shadow-lg"
+          >
             <img
               src="/xpoll%20(2nd%20section).png"
               alt="Xpoll Project"
               className="w-full h-full object-cover"
-            />{" "}
-          </div>{" "}
-          {/* Second card with GIF in top-right */}{" "}
-          <div className="relative w-full md:w-1/2 h-100 rounded-4xl overflow-hidden shadow-lg">
-            {" "}
+            />
+          </a>
+          {/* Second card → greatrwb.com */}
+          <a
+            href="https://greatrwb.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open greatrwb.com"
+            className="relative block w-full md:w-1/2 h-100 rounded-4xl overflow-hidden shadow-lg"
+          >
             <img
               src="/grwb%20card.png"
               alt="GRWB Project"
               className="w-full h-full object-cover"
-            />{" "}
+            />
             <img
               src="/Coin%20animation.gif"
               alt="Coin Animation"
-              className="absolute top-2 right-2 w-50 h-30"
-            />{" "}
-          </div>{" "}
+              className="absolute top-2 right-2 object-contain
+               w-36 h-18
+               sm:w-30 sm:h-20
+               md:w-40 md:h-24
+               xl:w-52 xl:h-32"
+            />
+          </a>
         </div>{" "}
-        <button className="mt-16 px-10 py-3 text-lg font-bold bg-gray-700 text-white rounded-lg hover:bg-blue-700 transition">
-          {" "}
-          Book your Consultant{" "}
-        </button>{" "}
       </section>
 
-      {/* ---------- Last Section ---------- */}
-      <section className="w-full mt-16">
+      {/* ---------- Last Section (with centered overlay text) ---------- */}
+      <section className="relative w-full mt-16">
         <img
           src="/last%20section%20image.png"
           alt="Last Section"
           className="w-full h-[40svh] md:h-[40vh] object-cover object-bottom"
           loading="lazy"
         />
+
+        {/* Overlay content like hero */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-black px-4">
+          <h3 className="text-5xl sm:text-5xl md:text-6xl font-extrabold tracking-tight">
+            How can we help you?
+          </h3>
+          <a
+            href="mailto:stanton@canvasslabs.world"
+            className="mt-6 text-lg sm:text-xl md:text-4xl font-semibold   hover:decoration-white"
+          >
+            stanton@canvasslabs.world
+          </a>
+        </div>
       </section>
     </div>
   );
