@@ -135,7 +135,18 @@ export default function App() {
 
         {/* Overlay content like hero */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-black px-4">
-          <h3 className="text-5xl sm:text-5xl md:text-6xl font-extrabold tracking-tight">
+          <section className="md:space-y-2 py-4">
+            <h3 className="text-xl md:text-2xl font-bold tracking-tight">
+              The Quantum Mirror Order your Copy now
+            </h3>
+            <button
+              onClick={() => window.open("https://amzn.in/d/0qPPbe9", "_blank")}
+              className="hover:bg-[#0e7777] bg-[#0DACAD] px-4 py-2 rounded-full font-bold text-white"
+            >
+              Order Now
+            </button>
+          </section>
+          <h3 className="text-4xl md:text-6xl font-extrabold tracking-tight">
             How can we help you?
           </h3>
           <a
