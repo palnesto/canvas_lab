@@ -127,31 +127,28 @@ export default function App() {
       {/* ---------- Last Section (with centered overlay text) ---------- */}
       <section className="relative w-full mt-16">
         <img
-          src="/last%20section%20image.png"
+          src="/lastsectionimage.png"
           alt="Last Section"
-          className="w-full h-[40svh] md:h-[40vh] object-cover object-bottom"
+          className="w-full h-[50svh] md:h-[70vh] object-cover object-bottom"
           loading="lazy"
         />
 
-        {/* Overlay content like hero */}
+        {/* Overlay content */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-black px-4">
-          <section className="md:space-y-2 py-4">
-            <h3 className="text-xl md:text-2xl font-bold tracking-tight">
-              The Quantum Mirror Order your Copy now
-            </h3>
-            <button
-              onClick={() => window.open("https://amzn.in/d/0qPPbe9", "_blank")}
-              className="hover:bg-[#0e7777] bg-[#0DACAD] px-4 py-2 rounded-full font-bold text-white"
-            >
-              Order Now
-            </button>
-          </section>
-          <h3 className="text-4xl md:text-6xl font-extrabold tracking-tight">
+          {/* Book cover ABOVE the heading, centered & larger */}
+          <img
+            src="/bookcover.jpeg"
+            alt="Book Cover"
+            className="mb-6 w-40 md:w-72 lg:w-40 xl:w-52 h-auto rounded-xl shadow-xl"
+            onClick={() => window.open("https://amzn.in/d/0qPPbe9", "_blank")}
+          />
+
+          <h3 className="text-3xl md:text-6xl font-extrabold tracking-tight">
             How can we help you?
           </h3>
           <a
             href="mailto:stanton@canvaslabs.world"
-            className="mt-6 text-lg sm:text-xl md:text-4xl font-semibold   hover:decoration-white"
+            className="md:mt-6 text-lg sm:text-xl md:text-4xl font-semibold hover:underline"
           >
             stanton@canvaslabs.world
           </a>
