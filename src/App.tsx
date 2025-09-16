@@ -79,7 +79,7 @@ export default function App() {
 
         {/* ---------- Middle Section ---------- */}
         {/* ---------- Middle Section (FULL-BLEED + TALL) ---------- */}
-        <section className="mt-16 md:mt-24 text-center">
+        <section className="mt-16 md:mt-24 text-center space-y-4">
           {" "}
           <h2 className="text-4xl md:text-7xl font-bold mb-10">
             OUR PROJECTS
@@ -123,7 +123,34 @@ export default function App() {
                xl:w-52 xl:h-32"
               />
             </a>
-          </div>{" "}
+          </div>
+          <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-6 md:px-20">
+            <a
+              href=""
+              target="_blank"
+              aria-label="Open xpoll.io"
+              className="relative block w-full md:w-1/2 h-100 rounded-4xl overflow-hidden shadow-lg"
+            >
+              <img
+                src="/cardona.jpg"
+                alt="Xpoll Project"
+                className="w-full h-full object-cover"
+              />
+            </a>
+            <a
+              href="https://www.dasmoresolutions.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open greatrwb.com"
+              className="relative block w-full md:w-1/2 h-100 rounded-4xl overflow-hidden shadow-lg"
+            >
+              <img
+                src="/dasmore.jpg"
+                alt="GRWB Project"
+                className="w-full h-full object-cover"
+              />
+            </a>
+          </div>
         </section>
 
         {/* ---------- Last Section (with centered overlay text) ---------- */}
@@ -142,18 +169,13 @@ export default function App() {
               src="/bookcard.jpg"
               alt="Book Cover"
               className="mb-6 w-full h-auto sm:w-full md:w-[32rem] lg:w-[36rem] xl:w-[40rem] rounded-3xl shadow-2xl cursor-pointer object-cover object-left sm:object-center"
-              onClick={() => window.open("https://amzn.in/d/0qPPbe9", "_blank")}
+              onClick={() =>
+                window.open(
+                  "https://www.amazon.com/dp/B0FNYGSRLV?ref=cm_sw_r_ffobk_cso_cp_mwn_dp_DAX3MFB73JRR5PF2QSBQ_1&ref_=cm_sw_r_ffobk_cso_cp_mwn_dp_DAX3MFB73JRR5PF2QSBQ_1&social_share=cm_sw_r_ffobk_cso_cp_mwn_dp_DAX3MFB73JRR5PF2QSBQ_1&bestFormat=true&titleSource=true",
+                  "_blank"
+                )
+              }
             />
-
-            <h3 className="text-3xl md:text-6xl font-extrabold tracking-tight">
-              How can we help you?
-            </h3>
-            <a
-              href="mailto:stanton@canvaslabs.world"
-              className="md:mt-6 text-lg sm:text-xl md:text-4xl font-semibold hover:underline"
-            >
-              stanton@canvaslabs.world
-            </a>
           </div>
         </section>
       </div>
