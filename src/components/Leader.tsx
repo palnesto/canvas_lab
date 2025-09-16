@@ -23,61 +23,67 @@ export default function XPOLLLeadership({
   ],
 }) {
   return (
-    <section className="pt-16 pb-32 flex flex-col text-center justify-center px-8 md:px-16">
-      <div className="max-w-7xl w-full">
-        <div className="flex flex-col md:flex-row items-center text-center md:text-start bg-[#F7F9FC] rounded-xl overflow-hidden shadow-2xl">
-          <img
-            src={heroImage}
-            alt={title}
-            className="sm:w-1/2 h-auto object-cover md:p-7 rounded-xl"
-          />
-          <div className="p-4 md:p-6 md:w-1/2 text-[#23262D] font-bold">
-            <h2 className="text-2xl md:text-3xl pb-2">{title}</h2>
-            <h3 className="text-lg md:text-2xl">{subtitle}</h3>
-            <p className="text-lg flex gap-2 items-center py-1">
-              {role}
-              <a href={linkedin} target="_blank" className="w-5 h-5">
-                <img src="/linked.png" alt="linkedin" />
-              </a>
-            </p>
-            <p className="text-[#566171] text-xs sm:text-sm lg:text-base font-medium text-justify">
-              {description}
-            </p>
-          </div>
-        </div>
-
-        <div className="pt-16 grid grid-cols-1 sm:grid-cols-2 gap-10 md:gap-7 justify-items-center">
-          {profiles.map((profile, idx) => (
-            <div
-              key={idx}
-              className="flex flex-col items-center text-center w-80 md:w-64"
-            >
-              <img
-                src={profile.src}
-                alt={profile.alt}
-                className="w-full h-auto object-cover rounded-lg shadow-sm"
-              />
-              <h1 className="text-xs pt-2 md:text-xl font-akira">
-                {profile.name}
-              </h1>
-              <p className="text-base md:text-lg font-bold flex gap-2 items-center">
-                {profile.role}
-                <a href={profile.linkedin} target="_blank" className="w-5 h-5">
+    <section className="pt-16 pb-32">
+      <div className="flex justify-center px-8 md:px-16">
+        <div className="max-w-7xl w-full">
+          <div className="flex flex-col md:flex-row items-center text-center md:text-start bg-[#F7F9FC] rounded-xl overflow-hidden shadow-2xl">
+            <img
+              src={heroImage}
+              alt={title}
+              className="sm:w-1/2 h-auto object-cover md:p-7 rounded-xl"
+            />
+            <div className="p-4 md:p-6 md:w-1/2 text-[#23262D] font-bold">
+              <h2 className="text-2xl md:text-3xl pb-2">{title}</h2>
+              <h3 className="text-lg md:text-2xl">{subtitle}</h3>
+              <p className="text-lg flex gap-2 items-center py-1">
+                {role}
+                <a href={linkedin} target="_blank" className="w-5 h-5">
                   <img src="/linked.png" alt="linkedin" />
                 </a>
               </p>
+              <p className="text-[#566171] text-xs sm:text-sm lg:text-base font-medium text-justify">
+                {description}
+              </p>
             </div>
-          ))}
+          </div>
+
+          <div className="pt-16 grid grid-cols-1 sm:grid-cols-2 gap-10 md:gap-7 justify-items-center">
+            {profiles.map((profile, idx) => (
+              <div
+                key={idx}
+                className="flex flex-col items-center text-center w-80 md:w-64"
+              >
+                <img
+                  src={profile.src}
+                  alt={profile.alt}
+                  className="w-full h-auto object-cover rounded-lg shadow-sm"
+                />
+                <h1 className="text-xs pt-2 md:text-xl font-akira">
+                  {profile.name}
+                </h1>
+                <p className="text-base md:text-lg font-bold flex gap-2 items-center">
+                  {profile.role}
+                  <a
+                    href={profile.linkedin}
+                    target="_blank"
+                    className="w-5 h-5"
+                  >
+                    <img src="/linked.png" alt="linkedin" />
+                  </a>
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-      <h3 className="text-3xl md:text-6xl font-extrabold tracking-tight pt-10">
+      <h3 className="pb-5 text-3xl text-center md:text-6xl font-extrabold tracking-tight pt-10">
         How can we help you?
       </h3>
       <a
         href="mailto:stanton@canvaslabs.world"
-        className="md:mt-6 text-lg sm:text-xl md:text-4xl font-semibold hover:underline"
+        className="text-center text-lg sm:text-xl md:text-4xl font-semibold hover:underline"
       >
-        stanton@canvaslabs.world
+        <p> stanton@canvaslabs.world</p>
       </a>
     </section>
   );
