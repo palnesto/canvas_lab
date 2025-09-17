@@ -151,6 +151,20 @@ export default function App() {
               />
             </a>
           </div>
+          <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-6 md:px-20">
+            <a
+              href="https://drive.google.com/file/d/1GZJVctmQr4bmQdUJEFBjdZKCx6cukVvQ/view?usp=sharing"
+              target="_blank"
+              aria-label="Open xpoll.io"
+              className="relative block w-full md:w-1/2 h-100 rounded-4xl overflow-hidden shadow-lg"
+            >
+              <img
+                src="/rsa.jpg"
+                alt="Xpoll Project"
+                className="w-full h-full object-cover object-right"
+              />
+            </a>
+          </div>
         </section>
 
         {/* ---------- Last Section (with centered overlay text) ---------- */}
