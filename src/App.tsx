@@ -67,7 +67,7 @@ export default function App() {
           {/* Content overlay - allow hover to pass by not catching pointer events */}
           <div className="relative z-10 flex h-full flex-col items-center justify-center text-white bg-black/40 pointer-events-none select-none">
             <img
-              src="/canvas%20labs%20logo.png" // encode space OR rename file
+              src="/logo.png" // encode space OR rename file
               alt="Canvas Labs Logo"
               className="w-52 sm:w-64 md:w-72 lg:w-80 xl:w-96 mb-6" /* responsive (replaces md:w-74, xl:w-84) */
             />
@@ -126,7 +126,7 @@ export default function App() {
           </div>
           <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-6 md:px-20">
             <a
-              href=""
+              href="https://drive.google.com/file/d/1ezYW7CqAl2qiZYpcCoXI-47d098KdZUw/view?usp=sharing"
               target="_blank"
               aria-label="Open xpoll.io"
               className="relative block w-full md:w-1/2 h-100 rounded-4xl overflow-hidden shadow-lg"
