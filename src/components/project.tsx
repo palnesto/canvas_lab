@@ -8,7 +8,7 @@ const Project = () => {
         {/* First card */} {/* First card → xpoll.io */}
         <div
           onClick={() => setOpen(true)}
-          className="relative block w-full md:w-1/2 h-100 rounded-4xl overflow-hidden shadow-lg cursor-pointer"
+          className="relative block w-full md:w-1/2 h-60 xl:h-96 rounded-4xl overflow-hidden shadow-lg cursor-pointer"
         >
           <img
             src="/cofrRisk.jpg"
@@ -19,7 +19,7 @@ const Project = () => {
         {/* Second card → greatrwb.com */}
         <div
           onClick={() => setOpen(true)}
-          className="relative block w-full md:w-1/2 h-100 rounded-4xl overflow-hidden shadow-lg cursor-pointer"
+          className="relative block w-full md:w-1/2 h-60 xl:h-96 rounded-4xl overflow-hidden shadow-lg cursor-pointer"
         >
           <img
             src="/Narwal.jpg"
@@ -31,7 +31,7 @@ const Project = () => {
       <section className="flex flex-col md:flex-row justify-center items-center gap-10 px-6 md:px-20">
         <div
           onClick={() => setOpen(true)}
-          className="relative block w-full md:w-1/2 h-100 rounded-4xl overflow-hidden shadow-lg cursor-pointer"
+          className="relative block w-full md:w-1/2 h-60 xl:h-96 rounded-4xl overflow-hidden shadow-lg cursor-pointer"
         >
           <img
             src="/Stowaway.jpg"
@@ -41,10 +41,10 @@ const Project = () => {
         </div>
         <div
           onClick={() => setOpen(true)}
-          className="relative block w-full md:w-1/2 h-100 rounded-4xl overflow-hidden shadow-lg cursor-pointer"
+          className="relative block w-full md:w-1/2 h-60 xl:h-96 rounded-4xl overflow-hidden shadow-lg cursor-pointer"
         >
           <img
-            src="/PlantNutrition.jpg"
+            src="/ActionModels.jpg"
             alt="GRWB Project"
             className="w-full h-full object-fill object-right"
           />
@@ -54,7 +54,7 @@ const Project = () => {
         {/* First card */} {/* First card → xpoll.io */}
         <div
           onClick={() => setOpen(true)}
-          className="relative block w-full md:w-1/2 h-100 rounded-4xl overflow-hidden shadow-lg cursor-pointer"
+          className="relative block w-full md:w-1/2 h-60 xl:h-96 rounded-4xl overflow-hidden shadow-lg cursor-pointer"
         >
           <img
             src="/PlantNutrition.jpg"
@@ -65,7 +65,7 @@ const Project = () => {
         {/* Second card → greatrwb.com */}
         <div
           onClick={() => setOpen(true)}
-          className="relative block w-full md:w-1/2 h-100 rounded-4xl overflow-hidden shadow-lg cursor-pointer"
+          className="relative block w-full md:w-1/2 h-60 xl:h-96 rounded-4xl overflow-hidden shadow-lg cursor-pointer"
         >
           <img
             src="/AgenticArtificial.jpg"
@@ -77,7 +77,7 @@ const Project = () => {
       <section className="flex flex-col md:flex-row justify-center items-center gap-10 px-6 md:px-20">
         <div
           onClick={() => setOpen(true)}
-          className="relative block w-full md:w-1/2 h-100 rounded-4xl overflow-hidden shadow-lg cursor-pointer"
+          className="relative block w-full md:w-1/2 h-60 xl:h-96 rounded-4xl overflow-hidden shadow-lg cursor-pointer"
         >
           <img
             src="/Tokenization.jpg"
