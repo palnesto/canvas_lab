@@ -85,6 +85,12 @@ export default function XPOLLLeadership({
       >
         <p> stanton@canvaslabs.world</p>
       </a>
+      <a
+        href="tel:+18606550095"
+        className="text-center sm:text-lg md:text-3xl font-semibold hover:underline"
+      >
+        <p>Phone: +1 860 655 0095</p>
+      </a>
     </section>
   );
 }
