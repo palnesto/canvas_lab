@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useRef } from "react";
 import Leader from "./components/Leader";
+import Project from "./components/project";
+import { PartnerWithUsModal } from "./components/modal/partner-with-us-modal";
 
 export default function App() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -46,6 +48,7 @@ export default function App() {
 
   return (
     <div>
+      <PartnerWithUsModal />
       <div className="w-full min-h-screen font-sans">
         {/* ---------- Hero Section ---------- */}
         <section
@@ -80,10 +83,7 @@ export default function App() {
         {/* ---------- Middle Section ---------- */}
         {/* ---------- Middle Section (FULL-BLEED + TALL) ---------- */}
         <section className="mt-16 md:mt-24 text-center space-y-4">
-          {" "}
-          <h2 className="text-4xl md:text-7xl font-bold mb-10">
-            OUR PROJECTS
-          </h2>{" "}
+          <h2 className="text-4xl md:text-7xl font-bold mb-10">OUR PROJECTS</h2>
           <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-6 md:px-20">
             {" "}
             {/* First card */} {/* First card → xpoll.io */}
@@ -209,6 +209,13 @@ export default function App() {
           </div>
         </section>
       </div>
+      <section className="my-16 md:my-24 text-center space-y-4">
+        <h2 className="text-3xl md:text-6xl font-extrabold tracking-tight mb-10">
+          PENDING PROJECTS
+        </h2>
+        <Project />
+      </section>
+
       <div className="text-3xl md:text-6xl font-extrabold tracking-tight text-center mt-4">
         OUR TEAM
       </div>
