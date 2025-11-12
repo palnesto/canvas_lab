@@ -211,7 +211,7 @@ export default function App() {
       </div>
       <section className="my-16 md:my-24 text-center space-y-4">
         <h2 className="text-3xl md:text-6xl font-extrabold tracking-tight mb-10">
-          PENDING PROJECTS
+          HELM — Launch Queue
         </h2>
         <Project />
       </section>
