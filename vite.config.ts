@@ -1,8 +1,29 @@
+import react from "@vitejs/plugin-react-swc";
+import path from "node:path";
 import tailwindcss from "@tailwindcss/vite";
-import react from "@vitejs/plugin-react";
-import { defineConfig } from "vite";
+import { defineConfig, loadEnv, type ConfigEnv } from "vite";
+import Pages from "vite-plugin-pages";
 
-// https://vite.dev/config/
-export default defineConfig({
-  plugins: [react(), tailwindcss()],
+export default defineConfig(({ mode }: ConfigEnv) => {
+  const env = loadEnv(mode, process.cwd(), "VITE_");
+  return {
+    plugins: [react(), Pages(), tailwindcss()],
+    resolve: {
+      alias: {
+        "@": path.resolve(__dirname, "./src"),
+      },
+    },
+    build: {
+      outDir: "dist", // or set to "/app/dist"
+    },
+    server:
+      env.VITE_MODE === "development" || env.VITE_MODE === "local"
+        ? {
+            proxy: {
+              "/api": env.VITE_BACKEND_URL,
+            },
+            port: 5173,
+          }
+        : undefined,
+  };
 });

@@ -4,12 +4,15 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev:local": "dotenv -e src/env/.env.local vite --host",
+    "dev:production": "dotenv -e src/env/.env.production vite",
+    "build:local": "dotenv -e /app/src/env/.env.local vite build",
+    "build:production": "dotenv -e /app/src/env/.env.production vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "dotenv": "^16.4.7",
     "@radix-ui/react-alert-dialog": "^1.1.15",
     "@radix-ui/react-label": "^2.1.8",
     "@radix-ui/react-slot": "^1.2.4",
@@ -26,14 +29,17 @@
     "react-router-dom": "^7.9.5",
     "tailwind-merge": "^3.4.0",
     "tailwindcss": "^4.1.12",
-    "zustand": "^5.0.8"
+    "zustand": "^5.0.8",
+    "vite-plugin-pages": "^0.32.5"
   },
   "devDependencies": {
+    "dotenv-cli": "^8.0.0",
     "@eslint/js": "^9.33.0",
     "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",
     "@vitejs/plugin-react": "^5.0.0",
     "eslint": "^9.33.0",
+    "@vitejs/plugin-react-swc": "^3.5.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
