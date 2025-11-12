@@ -2,8 +2,10 @@ import { useEffect, useMemo, useRef } from "react";
 import Leader from "./components/Leader";
 import Project from "./components/project";
 import { PartnerWithUsModal } from "./components/modal/partner-with-us-modal";
+import { useApiQuery } from "./hooks/useApiQuery";
 
 export default function App() {
+  const {} = useApiQuery("/health-check");
   const videoRef = useRef<HTMLVideoElement>(null);
 
   // Detect devices that don't support hover (most touch/mobile)
