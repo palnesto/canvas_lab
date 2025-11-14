@@ -87,8 +87,6 @@ export default function App() {
         <section className="mt-16 md:mt-24 text-center space-y-4">
           <h2 className="text-4xl md:text-7xl font-bold mb-10">OUR PROJECTS</h2>
           <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-6 md:px-20">
-            {" "}
-            {/* First card */} {/* First card → xpoll.io */}
             <a
               href="https://xpoll.io"
               target="_blank"
@@ -102,7 +100,6 @@ export default function App() {
                 className="w-full h-full object-cover"
               />
             </a>
-            {/* Second card → greatrwb.com */}
             <a
               href="https://greatrwb.com"
               target="_blank"
@@ -198,9 +195,9 @@ export default function App() {
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-black px-4">
             {/* Book cover ABOVE the heading, centered & larger */}
             <img
-              src="/bookcard.jpg"
+              src="/bookCard.jpg"
               alt="Book Cover"
-              className="mb-6 w-full h-auto sm:w-full md:w-[32rem] lg:w-[36rem] xl:w-[40rem] rounded-3xl shadow-2xl cursor-pointer object-cover object-left sm:object-center"
+              className="mb-6 w-full h-auto sm:w-full md:w-lg lg:w-xl xl:w-3xl rounded-3xl shadow-2xl cursor-pointer object-cover object-left sm:object-center"
               onClick={() =>
                 window.open(
                   "https://www.amazon.com/dp/B0FNYGSRLV?ref=cm_sw_r_ffobk_cso_cp_mwn_dp_DAX3MFB73JRR5PF2QSBQ_1&ref_=cm_sw_r_ffobk_cso_cp_mwn_dp_DAX3MFB73JRR5PF2QSBQ_1&social_share=cm_sw_r_ffobk_cso_cp_mwn_dp_DAX3MFB73JRR5PF2QSBQ_1&bestFormat=true&titleSource=true",
