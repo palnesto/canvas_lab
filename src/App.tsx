@@ -3,6 +3,7 @@ import Leader from "./components/Leader";
 import Project from "./components/project";
 import { PartnerWithUsModal } from "./components/modal/partner-with-us-modal";
 import { useApiQuery } from "./hooks/useApiQuery";
+import featured from "@/assets/featured.webp";
 
 export default function App() {
   const {} = useApiQuery("/health-check");
@@ -214,10 +215,22 @@ export default function App() {
         </h2>
         <Project />
       </section>
-
-      <div className="text-3xl md:text-6xl font-extrabold tracking-tight text-center mt-4">
+      <section className="flex flex-col items-center gap-4 pb-28 pt-10">
+        <h1 className="text-3xl md:text-6xl font-extrabold tracking-tight text-center mt-4">
+          Featured in
+        </h1>
+        <a
+          href="https://www.ibtimes.com/inside-stanton-terranovas-canvas-labs-innovative-space-ideas-that-dont-fit-mold-3791873"
+          target="_blank"
+          rel="noopener noreferrer"
+          className=""
+        >
+          <img src={featured} alt="" className="h-20 xl:h-32" />
+        </a>
+      </section>
+      <h1 className="text-3xl md:text-6xl font-extrabold tracking-tight text-center mt-4">
         OUR TEAM
-      </div>
+      </h1>
       <Leader />
     </div>
   );
