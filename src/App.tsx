@@ -87,13 +87,13 @@ export default function App() {
         {/* ---------- Middle Section (FULL-BLEED + TALL) ---------- */}
         <section className="mt-16 md:mt-24 text-center space-y-4">
           <h2 className="text-4xl md:text-7xl font-bold mb-10">OUR PROJECTS</h2>
-          <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-6 md:px-20">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-3 lg:px-10">
             <a
               href="https://xpoll.io"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Open xpoll.io"
-              className="relative block w-full md:w-1/2 h-100 rounded-4xl overflow-hidden shadow-lg"
+              className="relative block w-full md:w-1/2 h-60 lg:h-100 rounded-4xl overflow-hidden shadow-lg"
             >
               <img
                 src="/xpoll%20(2nd%20section).png"
@@ -106,7 +106,7 @@ export default function App() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Open greatrwb.com"
-              className="relative block w-full md:w-1/2 h-100 rounded-4xl overflow-hidden shadow-lg"
+              className="relative block w-full md:w-1/2 h-60 lg:h-100 rounded-4xl overflow-hidden shadow-lg"
             >
               <img
                 src="/grwb%20card.png"
@@ -124,12 +124,24 @@ export default function App() {
               />
             </a>
           </div>
-          <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-6 md:px-20">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-3 lg:px-10">
+            <a
+              href="/strain.pdf"
+              target="_blank"
+              aria-label="Open xpoll.io"
+              className="relative block w-full md:w-1/2 h-60 lg:h-100 rounded-4xl overflow-hidden shadow-lg"
+            >
+              <img
+                src="/strain.png"
+                alt="Xpoll Project"
+                className="w-full h-full"
+              />
+            </a>
             <a
               href="https://drive.google.com/file/d/1ezYW7CqAl2qiZYpcCoXI-47d098KdZUw/view?usp=sharing"
               target="_blank"
               aria-label="Open xpoll.io"
-              className="relative block w-full md:w-1/2 h-100 rounded-4xl overflow-hidden shadow-lg"
+              className="relative block w-full md:w-1/2 h-60 lg:h-100 rounded-4xl overflow-hidden shadow-lg"
             >
               <img
                 src="/cardona.jpg"
@@ -137,12 +149,14 @@ export default function App() {
                 className="w-full h-full object-cover"
               />
             </a>
+          </div>
+          <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-3 lg:px-10">
             <a
               href="https://www.dasmoresolutions.com/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Open greatrwb.com"
-              className="relative block w-full md:w-1/2 h-100 rounded-4xl overflow-hidden shadow-lg"
+              className="relative block w-full md:w-1/2 h-60 lg:h-100 rounded-4xl overflow-hidden shadow-lg"
             >
               <img
                 src="/dasmore.jpg"
@@ -150,9 +164,7 @@ export default function App() {
                 className="w-full h-full object-cover"
               />
             </a>
-          </div>
-          <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-6 md:px-0">
-            <figure className="relative w-full md:w-1/2 h-100 rounded-4xl overflow-hidden shadow-lg">
+            <a className="relative block w-full md:w-1/2 h-60 lg:h-100 rounded-4xl overflow-hidden shadow-lg">
               <img
                 src="/rs.jpg"
                 alt="RS Project"
@@ -179,7 +191,7 @@ export default function App() {
                   Launch Preview
                 </a>
               </div>
-            </figure>
+            </a>
           </div>
         </section>
 
