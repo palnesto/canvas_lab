@@ -93,7 +93,7 @@ export default function App() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Open xpoll.io"
-              className="relative block w-full md:w-1/2 h-60 lg:h-100 rounded-4xl overflow-hidden shadow-lg"
+              className="relative block w-full md:w-1/2 h-60 lg:h-96 rounded-4xl overflow-hidden shadow-lg"
             >
               <img
                 src="/xpoll%20(2nd%20section).png"
@@ -106,7 +106,7 @@ export default function App() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Open greatrwb.com"
-              className="relative block w-full md:w-1/2 h-60 lg:h-100 rounded-4xl overflow-hidden shadow-lg"
+              className="relative block w-full md:w-1/2 h-60 lg:h-96 rounded-4xl overflow-hidden shadow-lg"
             >
               <img
                 src="/grwb%20card.png"
@@ -129,19 +129,19 @@ export default function App() {
               href="/strain.pdf"
               target="_blank"
               aria-label="Open xpoll.io"
-              className="relative block w-full md:w-1/2 h-60 lg:h-100 rounded-4xl overflow-hidden shadow-lg"
+              className="relative block w-full md:w-1/2 h-60 lg:h-96 rounded-4xl overflow-hidden shadow-lg"
             >
               <img
                 src="/strain.png"
                 alt="Xpoll Project"
-                className="w-full h-full"
+                className="w-full h-full object-cover object-right"
               />
             </a>
             <a
               href="https://drive.google.com/file/d/1ezYW7CqAl2qiZYpcCoXI-47d098KdZUw/view?usp=sharing"
               target="_blank"
               aria-label="Open xpoll.io"
-              className="relative block w-full md:w-1/2 h-60 lg:h-100 rounded-4xl overflow-hidden shadow-lg"
+              className="relative block w-full md:w-1/2 h-60 lg:h-96 rounded-4xl overflow-hidden shadow-lg"
             >
               <img
                 src="/cardona.jpg"
