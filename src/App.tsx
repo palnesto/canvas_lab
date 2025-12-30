@@ -4,7 +4,7 @@ import Project from "./components/project";
 import { PartnerWithUsModal } from "./components/modal/partner-with-us-modal";
 import { useApiQuery } from "./hooks/useApiQuery";
 import featured from "@/assets/featured.webp";
-
+import sub from "@/assets/sub.jpg";
 export default function App() {
   const {} = useApiQuery("/health-check");
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -82,10 +82,16 @@ export default function App() {
             </h1>
           </div>
         </section>
-
+        <section className="h-[50svh] lg:h-screen">
+          <img
+            src={sub}
+            alt=""
+            className="w-full h-full object-cover xl:object-fill"
+          />
+        </section>
         {/* ---------- Middle Section ---------- */}
         {/* ---------- Middle Section (FULL-BLEED + TALL) ---------- */}
-        <section className="mt-16 md:mt-24 text-center space-y-4">
+        <section className="mt-16 md:mt-32 text-center space-y-4">
           <h2 className="text-4xl md:text-7xl font-bold mb-10">OUR PROJECTS</h2>
           <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-3 lg:px-10">
             <a
