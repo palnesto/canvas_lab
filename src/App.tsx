@@ -91,8 +91,6 @@ export default function App() {
             className="w-full h-full object-cover xl:object-fill"
           />
         </section>
-        {/* ---------- Middle Section ---------- */}
-        {/* ---------- Middle Section (FULL-BLEED + TALL) ---------- */}
         <section className="mt-16 md:mt-32 text-center space-y-4">
           <h2 className="text-4xl md:text-7xl font-bold mb-10">OUR PROJECTS</h2>
           <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-3 lg:px-10">
@@ -146,6 +144,49 @@ export default function App() {
               />
             </a>
             <a
+              href="/geo.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open greatrwb.com"
+              className="relative block w-full md:w-1/2 h-60 lg:h-100 rounded-4xl overflow-hidden shadow-2xl"
+            >
+              <img
+                src="/geo.jpeg"
+                alt="GRWB Project"
+                className="w-full h-full object-cover"
+              />
+            </a>
+          </div>
+          <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-3 lg:px-10">
+            <a
+              href="/amy.pdf"
+              className="relative block w-full md:w-1/2 h-60 lg:h-100 rounded-4xl overflow-hidden shadow-lg"
+            >
+              <img
+                src="/amy.jpeg"
+                alt="RS Project"
+                className="w-full h-full object-cover object-right"
+              />
+              <div className="absolute top-32 left-3 md:left-auto md:right-10 flex items-center justify-center gap-6">
+                <a
+                  href="https://drive.google.com/file/d/1GZJVctmQr4bmQdUJEFBjdZKCx6cukVvQ/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 bg-white text-black font-semibold rounded-full shadow-lg hover:bg-gray-100 transition-all"
+                >
+                  Visit Now
+                </a>
+                <a
+                  href="https://www.figma.com/proto/wo2HNrGXOA4WFkeRy86wzy/RSA-Prototype?node-id=88-4285&t=vsdUvzHAslcQg70d-1&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=88%3A4285&show-proto-sidebar=1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 bg-black text-white font-semibold rounded-full shadow-lg hover:bg-gray-800 transition-all"
+                >
+                  Launch Preview
+                </a>
+              </div>
+            </a>
+            <a
               href="https://drive.google.com/file/d/1ezYW7CqAl2qiZYpcCoXI-47d098KdZUw/view?usp=sharing"
               target="_blank"
               aria-label="Open xpoll.io"
@@ -178,8 +219,6 @@ export default function App() {
                 alt="RS Project"
                 className="w-full h-full object-cover object-right"
               />
-
-              {/* Button container centered on image */}
               <div className="absolute top-32 left-3 md:left-auto md:right-10 flex items-center justify-center gap-6">
                 <a
                   href="https://drive.google.com/file/d/1GZJVctmQr4bmQdUJEFBjdZKCx6cukVvQ/view?usp=sharing"
@@ -202,8 +241,6 @@ export default function App() {
             </a>
           </div>
         </section>
-
-        {/* ---------- Last Section (with centered overlay text) ---------- */}
         <section className="relative w-full ">
           <img
             src="/lastsectionimage.png"
@@ -211,10 +248,7 @@ export default function App() {
             className="w-full h-[50svh] md:h-[70vh] object-cover object-bottom"
             loading="lazy"
           />
-
-          {/* Overlay content */}
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-black px-4">
-            {/* Book cover ABOVE the heading, centered & larger */}
             <img
               src="/bookCard.jpg"
               alt="Book Cover"
