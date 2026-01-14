@@ -167,24 +167,6 @@ export default function App() {
                 alt="RS Project"
                 className="w-full h-full object-cover object-right"
               />
-              <div className="absolute top-32 left-3 md:left-auto md:right-10 flex items-center justify-center gap-6">
-                <a
-                  href="https://drive.google.com/file/d/1GZJVctmQr4bmQdUJEFBjdZKCx6cukVvQ/view?usp=sharing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-6 py-3 bg-white text-black font-semibold rounded-full shadow-lg hover:bg-gray-100 transition-all"
-                >
-                  Visit Now
-                </a>
-                <a
-                  href="https://www.figma.com/proto/wo2HNrGXOA4WFkeRy86wzy/RSA-Prototype?node-id=88-4285&t=vsdUvzHAslcQg70d-1&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=88%3A4285&show-proto-sidebar=1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-6 py-3 bg-black text-white font-semibold rounded-full shadow-lg hover:bg-gray-800 transition-all"
-                >
-                  Launch Preview
-                </a>
-              </div>
             </a>
             <a
               href="https://drive.google.com/file/d/1ezYW7CqAl2qiZYpcCoXI-47d098KdZUw/view?usp=sharing"
