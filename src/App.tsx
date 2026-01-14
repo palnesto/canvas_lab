@@ -166,7 +166,7 @@ export default function App() {
               <img
                 src="/amy.jpeg"
                 alt="RS Project"
-                className="w-full h-full object-cover object-right"
+                className="w-full h-full object-cover "
               />
             </a>
             <a
