@@ -7,11 +7,11 @@ import featured from "@/assets/featured.webp";
 import ibt from "@/assets/ibt.svg";
 import biz from "@/assets/biz.jpeg";
 import sub from "@/assets/sub.jpg";
+import ceo from "@/assets/ceo.png";
 export default function App() {
   const {} = useApiQuery("/health-check");
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  // Detect devices that don't support hover (most touch/mobile)
   const isNoHover = useMemo(
     () =>
       typeof window !== "undefined" && window.matchMedia
@@ -19,18 +19,13 @@ export default function App() {
         : false,
     []
   );
-
-  // Ensure autoplay on mobile / no-hover devices
   useEffect(() => {
     const v = videoRef.current;
     if (!v || !isNoHover) return;
 
     const tryPlay = () => v.play().catch(() => {});
-    // try immediately + when metadata is ready
     tryPlay();
     v.addEventListener("loadedmetadata", tryPlay, { once: true });
-
-    // if browser blocks autoplay, start on first tap
     const onFirstTouch = () => {
       tryPlay();
       window.removeEventListener("touchend", onFirstTouch);
@@ -43,7 +38,6 @@ export default function App() {
     };
   }, [isNoHover]);
 
-  // Hover controls (desktop)
   const handleEnter = () => {
     if (!isNoHover && videoRef.current) videoRef.current.play().catch(() => {});
   };
@@ -55,7 +49,6 @@ export default function App() {
     <div>
       <PartnerWithUsModal />
       <div className="w-full min-h-screen font-sans">
-        {/* ---------- Hero Section ---------- */}
         <section
           className="relative w-full overflow-hidden h-[50svh] md:h-screen"
           onMouseEnter={handleEnter}
@@ -256,7 +249,7 @@ export default function App() {
         <h1 className="text-3xl md:text-6xl font-extrabold tracking-tight text-center mt-4">
           Featured in
         </h1>
-        <section className="flex flex-col md:flex-row items-center gap-14">
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 place-items-center gap-7 md:gap-14 md:px-6">
           <a
             href="https://www.ibtimes.com/inside-stanton-terranovas-canvas-labs-innovative-space-ideas-that-dont-fit-mold-3791873"
             target="_blank"
@@ -284,6 +277,14 @@ export default function App() {
             className=""
           >
             <img src={biz} alt="" className="h-20 xl:h-32 xl:mt-7" />
+          </a>
+          <a
+            href="https://ceoweekly.com/from-law-to-systems-innovation-how-stanton-terranova-built-a-life-and-business-around-earned-independence/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className=""
+          >
+            <img src={ceo} alt="" className="h-20 xl:h-32 xl:mt-7" />
           </a>
         </section>
       </section>
