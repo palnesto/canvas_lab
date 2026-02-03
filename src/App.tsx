@@ -8,6 +8,7 @@ import ibt from "@/assets/ibt.svg";
 import biz from "@/assets/biz.jpeg";
 import sub from "@/assets/sub.jpg";
 import ceo from "@/assets/ceo.png";
+import voice from "@/assets/voice.jpeg";
 export default function App() {
   const {} = useApiQuery("/health-check");
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -17,7 +18,7 @@ export default function App() {
       typeof window !== "undefined" && window.matchMedia
         ? !window.matchMedia("(hover: hover)").matches
         : false,
-    []
+    [],
   );
   useEffect(() => {
     const v = videoRef.current;
@@ -232,7 +233,7 @@ export default function App() {
               onClick={() =>
                 window.open(
                   "https://www.amazon.com/dp/B0FNYGSRLV?ref=cm_sw_r_ffobk_cso_cp_mwn_dp_DAX3MFB73JRR5PF2QSBQ_1&ref_=cm_sw_r_ffobk_cso_cp_mwn_dp_DAX3MFB73JRR5PF2QSBQ_1&social_share=cm_sw_r_ffobk_cso_cp_mwn_dp_DAX3MFB73JRR5PF2QSBQ_1&bestFormat=true&titleSource=true",
-                  "_blank"
+                  "_blank",
                 )
               }
             />
@@ -246,48 +247,62 @@ export default function App() {
         <Project />
       </section>
       <section className="flex flex-col items-center gap-10 pb-28 pt-10">
-        <h1 className="text-3xl md:text-6xl font-extrabold tracking-tight text-center mt-4">
+        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-center mt-4">
           Featured in
         </h1>
-        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 place-items-center gap-7 md:gap-14 md:px-6">
+
+        <section className="grid grid-cols-1 place-items-center gap-7 px-4 md:grid-cols-2 md:gap-14 md:px-6 xl:grid-cols-5">
           <a
             href="https://www.ibtimes.com/inside-stanton-terranovas-canvas-labs-innovative-space-ideas-that-dont-fit-mold-3791873"
             target="_blank"
             rel="noopener noreferrer"
-            className=""
+            className="flex items-center justify-center"
           >
-            <img src={featured} alt="" className="h-20 xl:h-32 xl:mt-7" />
+            <img src={featured} alt="featured in" className="h-28 xl:h-32" />
           </a>
+
+          <a
+            href="https://www.villagevoice.com/how-a-new-england-farmer-became-a-builder-of-narrative-platforms-for-communities-seeking-clearer-digital-voices/"
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center justify-center"
+          >
+            <img src={voice} alt="Village Voice" className="h-20 xl:h-32" />
+          </a>
+
           <a
             href="https://www.ibtimes.com/ai-doesnt-fail-because-technology-it-fails-when-humans-misunderstand-each-other-3794535"
             target="_blank"
             rel="noopener noreferrer"
-            className=""
+            className="flex items-center justify-center"
           >
             <img
               src={ibt}
-              alt=""
-              className="h-12 md:h-20 xl:h-40 w-60 md:w-96"
+              alt="IBTimes"
+              className="h-12 w-60 md:h-20 md:w-96 xl:h-40 xl:w-60"
             />
           </a>
+
           <a
             href="https://www.flipsnack.com/menapublishinggroup/bizpreneur-middle-east-january-2026/full-view.html?p=124"
             target="_blank"
             rel="noopener noreferrer"
-            className=""
+            className="flex items-center justify-center"
           >
-            <img src={biz} alt="" className="h-20 xl:h-32 xl:mt-7" />
+            <img src={biz} alt="Bizpreneur" className="h-28 xl:h-32" />
           </a>
+
           <a
             href="https://ceoweekly.com/from-law-to-systems-innovation-how-stanton-terranova-built-a-life-and-business-around-earned-independence/"
             target="_blank"
             rel="noopener noreferrer"
-            className=""
+            className="flex items-center justify-center md:col-span-2 xl:col-span-1"
           >
-            <img src={ceo} alt="" className="h-20 xl:h-32 xl:mt-7" />
+            <img src={ceo} alt="CEO Weekly" className="h-20 xl:h-32" />
           </a>
         </section>
       </section>
+
       <h1 className="text-3xl md:text-6xl font-extrabold tracking-tight text-center mt-4">
         OUR TEAM
       </h1>
