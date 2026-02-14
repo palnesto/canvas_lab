@@ -244,7 +244,7 @@ export default function App() {
           </div>
           <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-3 lg:px-10">
             <a
-              href="/dredge.pdf"
+              href="https://app.dredge.world/"
               target="_blank"
               className="relative block w-full md:w-1/2 h-60 lg:h-100 rounded-4xl overflow-hidden shadow-lg"
             >
