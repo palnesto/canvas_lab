@@ -330,6 +330,30 @@ export default function App() {
               />
             </a>
           </div>
+          <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-3 lg:px-10">
+            <a
+              href="/cut.pdf"
+              target="_blank"
+              className="relative block w-full md:w-1/2 h-60 lg:h-100 rounded-4xl overflow-hidden shadow-lg"
+            >
+              <img
+                src="/cut.png"
+                alt="GRWB Project"
+                className="w-full h-full object-cover"
+              />
+            </a>
+            <a
+              href="/chart.pdf"
+              target="_blank"
+              className="relative block w-full md:w-1/2 h-60 lg:h-100 rounded-4xl overflow-hidden shadow-lg"
+            >
+              <img
+                src="/chart.jpeg"
+                alt="RS Project"
+                className="w-full h-full"
+              />
+            </a>
+          </div>
         </section>
         <section className="relative w-full ">
           <img
