@@ -278,13 +278,6 @@ export default function App() {
                 className="w-full h-full"
               />
             </a>
-            {/* <a
-              href="/fair.pdf"
-              target="_blank"
-              className="relative block w-full md:w-1/2 h-60 lg:h-100 rounded-4xl overflow-hidden shadow-lg"
-            >
-              <img src="/fair.png" alt="RS Project" className="w-full h-full" />
-            </a> */}
             <a
               href="/bc.pdf"
               target="_blank"
