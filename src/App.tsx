@@ -278,15 +278,13 @@ export default function App() {
                 className="w-full h-full"
               />
             </a>
-            <a
+            {/* <a
               href="/fair.pdf"
               target="_blank"
               className="relative block w-full md:w-1/2 h-60 lg:h-100 rounded-4xl overflow-hidden shadow-lg"
             >
               <img src="/fair.png" alt="RS Project" className="w-full h-full" />
-            </a>
-          </div>
-          <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-3 lg:px-10">
+            </a> */}
             <a
               href="/bc.pdf"
               target="_blank"
@@ -294,6 +292,8 @@ export default function App() {
             >
               <img src="/bc.png" alt="GRWB Project" className="w-full h-full" />
             </a>
+          </div>
+          <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-3 lg:px-10">
             <a
               href="/mark.pdf"
               target="_blank"
@@ -305,8 +305,6 @@ export default function App() {
                 className="w-full h-full object-cover"
               />
             </a>
-          </div>
-          <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-3 lg:px-10">
             <a
               href="/coffee.pdf"
               target="_blank"
@@ -318,6 +316,8 @@ export default function App() {
                 className="w-full h-full"
               />
             </a>
+          </div>
+          <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-3 lg:px-10">
             <a
               href="/curette.pdf"
               target="_blank"
@@ -329,8 +329,6 @@ export default function App() {
                 className="w-full h-full"
               />
             </a>
-          </div>
-          <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-3 lg:px-10">
             <a
               href="/cut.pdf"
               target="_blank"
@@ -342,6 +340,8 @@ export default function App() {
                 className="w-full h-full object-cover"
               />
             </a>
+          </div>
+          <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-3 lg:px-10">
             <a
               href="/chart.pdf"
               target="_blank"
@@ -353,8 +353,6 @@ export default function App() {
                 className="w-full h-full"
               />
             </a>
-          </div>
-          <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-3 lg:px-10">
             <a
               href="/three.pdf"
               target="_blank"
@@ -366,19 +364,15 @@ export default function App() {
                 className="w-full h-full object-cover object-right"
               />
             </a>
+          </div>
+          <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-3 lg:px-10">
             <a
               href="/term.pdf"
               target="_blank"
               className="relative block w-full md:w-1/2 h-60 lg:h-100 rounded-4xl overflow-hidden shadow-lg"
             >
-              <img
-                src="/term.png"
-                alt="RS Project"
-                className="w-full h-full"
-              />
+              <img src="/term.png" alt="RS Project" className="w-full h-full" />
             </a>
-          </div>
-          <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-3 lg:px-10">
             <a
               href="/jack.pdf"
               target="_blank"
@@ -390,16 +384,14 @@ export default function App() {
                 className="w-full h-full object-cover object-right"
               />
             </a>
+          </div>
+          <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-3 lg:px-10">
             <a
               href="/t.pdf"
               target="_blank"
               className="relative block w-full md:w-1/2 h-60 lg:h-100 rounded-4xl overflow-hidden shadow-lg"
             >
-              <img
-                src="/t.png"
-                alt="RS Project"
-                className="w-full h-full"
-              />
+              <img src="/t.png" alt="RS Project" className="w-full h-full" />
             </a>
           </div>
         </section>
