@@ -9,6 +9,7 @@ import biz from "@/assets/biz.jpeg";
 import sub from "@/assets/sub.jpg";
 import ceo from "@/assets/ceo.png";
 import voice from "@/assets/voice.jpeg";
+import yglf from "@/assets/yglf.avif";
 export default function App() {
   const {} = useApiQuery("/health-check");
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -421,7 +422,7 @@ export default function App() {
           Featured in
         </h1>
 
-        <section className="grid grid-cols-1 place-items-center gap-7 px-4 md:grid-cols-2 md:gap-14 md:px-6 xl:grid-cols-5">
+        <section className="grid grid-cols-1 place-items-center gap-7 px-4 md:grid-cols-2 md:gap-14 md:px-6 xl:grid-cols-6">
           <a
             href="https://www.ibtimes.com/inside-stanton-terranovas-canvas-labs-innovative-space-ideas-that-dont-fit-mold-3791873"
             target="_blank"
@@ -469,6 +470,14 @@ export default function App() {
             className="flex items-center justify-center md:col-span-2 xl:col-span-1"
           >
             <img src={ceo} alt="CEO Weekly" className="h-20 xl:h-32" />
+          </a>
+          <a
+            href="https://www.yglf.org/leadership-team"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center"
+          >
+            <img src={yglf} alt="featured in" className="h-28 xl:h-32" />
           </a>
         </section>
       </section>
