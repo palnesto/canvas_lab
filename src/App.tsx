@@ -79,14 +79,7 @@ export default function App() {
             </h1>
           </div>
         </section>
-        <section className="h-[50svh] lg:h-screen">
-          <img
-            src={sub}
-            alt=""
-            className="w-full h-full object-cover xl:object-fill"
-          />
-        </section>
-        <section className="mt-16 md:mt-32 text-center space-y-4">
+        <section className="mt-10 md:mt-16 text-center space-y-4">
           <h2 className="text-4xl md:text-7xl font-bold mb-10">OUR PROJECTS</h2>
           <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-3 lg:px-10">
             <a
