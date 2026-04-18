@@ -10,7 +10,7 @@ import dasmoreUrl from "@/assets/dasmore.png";
 import dredgeUrl from "@/assets/dredge.png";
 import grwbUrl from "@/assets/grwb.png";
 import inkdUrl from "@/assets/inkd.png";
-import sardineUrl from "@/assets/sardinepay.jpg";
+import sardineUrl from "@/assets/sardinepay.png";
 import xpollUrl from "@/assets/xpoll.png";
 import { ScrollShipDecoration } from "./ScrollShipDecoration";
 
@@ -616,16 +616,16 @@ export default function CanvasLabsLanding() {
       <ul>
         <li><a href="https://xpoll.io" target="_blank">XPoll ↗</a></li>
         <li><a href="https://greatrwb.com" target="_blank">GRWB ↗</a></li>
-        <li><a href="https://app.dredge.world/" target="_blank">Dredge ↗</a></li>
+        <li><a href="https://client.dredge.world " target="_blank">Dredge ↗</a></li>
         <li><a href="https://www.dasmoresolutions.com/" target="_blank">Dasmore ↗</a></li>
       </ul>
     </div>
     <div className="footer-col">
-      <h4>Hail us</h4>
+      <h4>Mail us</h4>
       <ul>
         <li><a href="mailto:stanton@canvaslabs.world">stanton@canvaslabs.world</a></li>
         <li><a href="tel:+18606550095">+1 860 655 0095</a></li>
-        <li><a href="canvas strategies international structure.html">Canvas Strategies ↗</a></li>
+        <li><a href="https://canvasstrategiesinternational.com/">Canvas Strategies ↗</a></li>
       </ul>
     </div>
   </div>
