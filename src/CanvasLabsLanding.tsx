@@ -1,4 +1,4 @@
-import { useEffect, useId, useRef, useState, type FormEvent } from "react";
+import { useEffect, useId, useRef, useState, type ChangeEvent, type FormEvent } from "react";
 import "./CanvasLabsLanding.css";
 import faviconUrl from "@/assets/canvas-labs-favicon.svg";
 import pressBiz from "@/assets/biz.jpeg";
@@ -28,14 +28,40 @@ const MARQUEE_ITEMS = [
 ] as const;
 
 type PortfolioCat = "all" | "web3" | "ai" | "defi" | "enterprise";
+type FormStatus = "idle" | "loading" | "success" | "error";
+
+type FormState = {
+  name: string;
+  email: string;
+  organization: string;
+  projectType: string;
+  budget: string;
+  timeline: string;
+  description: string;
+};
+
+const INITIAL_FORM: FormState = {
+  name: "",
+  email: "",
+  organization: "",
+  projectType: "",
+  budget: "",
+  timeline: "",
+  description: "",
+};
 
 export default function CanvasLabsLanding() {
   const shipGradId = useId().replace(/:/g, "cl-ship-");
+  const API_BASE = import.meta.env.VITE_API_BASE;
+
   const [menuOpen, setMenuOpen] = useState(false);
   const [burgerOpen, setBurgerOpen] = useState(false);
   const [navScrolled, setNavScrolled] = useState(false);
   const [portfolioCat, setPortfolioCat] = useState<PortfolioCat>("all");
-  const [submitLabel, setSubmitLabel] = useState("Send inquiry");
+
+  const [form, setForm] = useState<FormState>(INITIAL_FORM);
+  const [status, setStatus] = useState<FormStatus>("idle");
+  const [errorMsg, setErrorMsg] = useState("");
 
   const videoRef = useRef<HTMLVideoElement>(null);
   const heroWrapRef = useRef<HTMLDivElement>(null);
@@ -162,21 +188,48 @@ export default function CanvasLabsLanding() {
     });
   }, []);
 
-  const onFormSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>,
+  ) => {
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const onFormSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const fd = new FormData(e.currentTarget);
+    setStatus("loading");
+    setErrorMsg("");
+
     const payload = {
-      name: String(fd.get("name") ?? ""),
-      email: String(fd.get("email") ?? ""),
-      organization: String(fd.get("organization") ?? ""),
-      projectType: String(fd.get("project_type") ?? ""),
-      budget: String(fd.get("budget") ?? ""),
-      timeline: String(fd.get("timeline") ?? ""),
-      description: String(fd.get("description") ?? ""),
+      name: form.name,
+      email: form.email,
+      organization: form.organization,
+      projectType: form.projectType,
+      budget: form.budget,
+      timeline: form.timeline,
+      description: form.description,
     };
-    console.log("Consultation form submission", payload);
-    setSubmitLabel("✓ Sent!");
-    window.setTimeout(() => setSubmitLabel("Send inquiry"), 3000);
+
+    try {
+      const res = await fetch(`${API_BASE}/canvas-labs/contact-us`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) {
+        const text = await res.text();
+        throw new Error(text || `Server error: ${res.status}`);
+      }
+
+      setStatus("success");
+      setForm(INITIAL_FORM);
+    } catch (err) {
+      console.error("Form submission error:", err);
+      const message = err instanceof Error ? err.message : "Something went wrong. Please try again.";
+      setErrorMsg(message);
+      setStatus("error");
+    }
   };
 
   const groupHidden = (g: Exclude<PortfolioCat, "all">) =>
@@ -571,18 +624,114 @@ export default function CanvasLabsLanding() {
         <div className="form-title">Request a consultation</div>
         <form onSubmit={onFormSubmit}>
           <div className="form-grid">
-            <div className="form-row"><label>Name</label><input name="name" type="text" placeholder="Your full name" required /></div>
-            <div className="form-row"><label>Email</label><input name="email" type="email" placeholder="you@example.com" required /></div>
-            <div className="form-row form-full"><label>Organization</label><input name="organization" type="text" placeholder="Your organization" /></div>
-            <div className="form-row"><label>Project type</label><div className="select-wrap"><select name="project_type" required defaultValue=""><option value="" disabled>Select type</option><option>Custom Development</option><option>AI Production</option><option>Campaign Tools</option><option>Consulting</option><option>White Label / Licensing</option><option>Other</option></select></div></div>
-            <div className="form-row"><label>Budget range</label><div className="select-wrap"><select name="budget" required defaultValue=""><option value="" disabled>Select range</option><option>Under $50K</option><option>$50K – $100K</option><option>$100K – $500K</option><option>$500K+</option></select></div></div>
-            <div className="form-row form-full"><label>Timeline</label><div className="select-wrap"><select name="timeline" required defaultValue=""><option value="" disabled>Select timeline</option><option>Under 3 months</option><option>3 – 6 months</option><option>6 – 12 months</option><option>12+ months</option></select></div></div>
+            <div className="form-row">
+              <label>Name</label>
+              <input
+                name="name"
+                type="text"
+                placeholder="Your full name"
+                value={form.name}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-row">
+              <label>Email</label>
+              <input
+                name="email"
+                type="email"
+                placeholder="you@example.com"
+                value={form.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-row form-full">
+              <label>Organization</label>
+              <input
+                name="organization"
+                type="text"
+                placeholder="Your organization"
+                value={form.organization}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="form-row">
+              <label>Project type</label>
+              <div className="select-wrap">
+                <select
+                  name="projectType"
+                  value={form.projectType}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="" disabled>Select type</option>
+                  <option>Custom Development</option>
+                  <option>AI Production</option>
+                  <option>Campaign Tools</option>
+                  <option>Consulting</option>
+                  <option>White Label / Licensing</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div className="form-row">
+              <label>Budget range</label>
+              <div className="select-wrap">
+                <select
+                  name="budget"
+                  value={form.budget}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="" disabled>Select range</option>
+                  <option>Under $50K</option>
+                  <option>$50K – $100K</option>
+                  <option>$100K – $500K</option>
+                  <option>$500K+</option>
+                </select>
+              </div>
+            </div>
+            <div className="form-row form-full">
+              <label>Timeline</label>
+              <div className="select-wrap">
+                <select
+                  name="timeline"
+                  value={form.timeline}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="" disabled>Select timeline</option>
+                  <option>Under 3 months</option>
+                  <option>3 – 6 months</option>
+                  <option>6 – 12 months</option>
+                  <option>12+ months</option>
+                </select>
+              </div>
+            </div>
             <div className="form-row form-full">
               <label>Project description</label>
-              <textarea name="description" placeholder="Tell us what you're looking to build..." />
+              <textarea
+                name="description"
+                placeholder="Tell us what you're looking to build..."
+                value={form.description}
+                onChange={handleChange}
+              />
             </div>
           </div>
-          <button type="submit" className="form-submit">{submitLabel}</button>
+          {status === "success" && (
+            <div className="form-feedback form-success">
+              ✓ Inquiry sent — our team will be in touch within 24 hours.
+            </div>
+          )}
+          {status === "error" && (
+            <div className="form-feedback form-error">
+              {errorMsg}
+            </div>
+          )}
+          <button type="submit" className="form-submit" disabled={status === "loading"}>
+            {status === "loading" ? "Sending…" : status === "success" ? "✓ Sent!" : "Send inquiry"}
+          </button>
         </form>
       </div>
     </div>
