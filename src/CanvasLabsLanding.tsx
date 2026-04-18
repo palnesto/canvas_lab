@@ -1,7 +1,10 @@
 import { useEffect, useId, useRef, useState, type FormEvent } from "react";
 import "./CanvasLabsLanding.css";
 import faviconUrl from "@/assets/canvas-labs-favicon.svg";
-import inkdUrl from "@/assets/inkd.jpg";
+import dasmoreUrl from "@/assets/dasmore.png";
+import dredgeUrl from "@/assets/dredge.png";
+import grwbUrl from "@/assets/grwb.png";
+import inkdUrl from "@/assets/inkd.png";
 import sardineUrl from "@/assets/sardinepay.jpg";
 import xpollUrl from "@/assets/xpoll.png";
 import { ScrollShipDecoration } from "./ScrollShipDecoration";
@@ -381,8 +384,7 @@ export default function CanvasLabsLanding() {
         </div>
         <div className="port-card cat-web3 rv d2">
           <div className="port-img">
-            <img src="https://www.canvaslabs.world/grwb%20card.png" alt="GRWB Engine" className="port-real-img" />
-            <img src="https://www.canvaslabs.world/Coin%20animation.gif" alt="" className="port-coin-anim" />
+            <img src={grwbUrl} alt="GRWB Engine" className="port-real-img" />
           </div>
           <div className="port-body">
             <div className="port-meta"><span>No. 02</span><span className="port-meta-sep" /><span>Growth Engine · Web3</span></div>
@@ -418,7 +420,7 @@ export default function CanvasLabsLanding() {
       <div className={"port-group" + (groupHidden("defi") ? " hidden" : "")} data-group="defi">
         <div className="port-card cat-defi rv d1">
           <div className="port-img">
-            <img src="https://www.canvaslabs.world/dredge.jpg" alt="Dredge" className="port-real-img" />
+            <img src={dredgeUrl} alt="Dredge" className="port-real-img" />
           </div>
           <div className="port-body">
             <div className="port-meta"><span>No. 06</span><span className="port-meta-sep" /><span>Data Analytics · DeFi</span></div>
@@ -436,7 +438,7 @@ export default function CanvasLabsLanding() {
       <div className={"port-group" + (groupHidden("enterprise") ? " hidden" : "")} data-group="enterprise">
         <div className="port-card cat-enterprise rv d1">
           <div className="port-img">
-            <img src="" alt="Dasmore Solutions" className="port-real-img" />
+            <img src={dasmoreUrl} alt="Dasmore Solutions" className="port-real-img" />
           </div>
           <div className="port-body">
             <div className="port-meta"><span>No. 08</span><span className="port-meta-sep" /><span>Enterprise Solutions</span></div>

@@ -178,7 +178,7 @@ nav.scrolled{box-shadow:0 1px 0 rgba(24,24,27,.06),0 8px 24px rgba(24,24,27,.04)
 .port-card:hover{transform:translateY(-6px);box-shadow:0 2px 6px rgba(26,24,20,.06),0 16px 44px rgba(26,24,20,.10);border-color:var(--border-mid)}
 .port-img{aspect-ratio:16/10;position:relative;overflow:hidden;background:var(--s2);margin:0}
 .port-img-inner{width:100%;height:100%}
-.port-real-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease-out)}
+.port-real-img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;transition:transform .7s var(--ease-out)}
 .port-card:hover .port-real-img{transform:scale(1.05)}
 .port-coin-anim{position:absolute;top:14px;right:14px;width:68px;height:auto;z-index:2;pointer-events:none;transition:transform .3s var(--ease-spring)}
 .port-card:hover .port-coin-anim{transform:scale(1.1) rotate(-5deg)}
