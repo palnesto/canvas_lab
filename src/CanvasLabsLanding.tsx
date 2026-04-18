@@ -1,6 +1,11 @@
 import { useEffect, useId, useRef, useState, type FormEvent } from "react";
 import "./CanvasLabsLanding.css";
 import faviconUrl from "@/assets/canvas-labs-favicon.svg";
+import pressBiz from "@/assets/biz.jpeg";
+import pressCeo from "@/assets/ceo.png";
+import pressFeatured from "@/assets/featured.webp";
+import pressVoice from "@/assets/voice.jpeg";
+import pressYglf from "@/assets/yglf.avif";
 import dasmoreUrl from "@/assets/dasmore.png";
 import dredgeUrl from "@/assets/dredge.png";
 import grwbUrl from "@/assets/grwb.png";
@@ -159,6 +164,17 @@ export default function CanvasLabsLanding() {
 
   const onFormSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const fd = new FormData(e.currentTarget);
+    const payload = {
+      name: String(fd.get("name") ?? ""),
+      email: String(fd.get("email") ?? ""),
+      organization: String(fd.get("organization") ?? ""),
+      projectType: String(fd.get("project_type") ?? ""),
+      budget: String(fd.get("budget") ?? ""),
+      timeline: String(fd.get("timeline") ?? ""),
+      description: String(fd.get("description") ?? ""),
+    };
+    console.log("Consultation form submission", payload);
     setSubmitLabel("✓ Sent!");
     window.setTimeout(() => setSubmitLabel("Send inquiry"), 3000);
   };
@@ -489,19 +505,19 @@ export default function CanvasLabsLanding() {
     <h3 className="press-headline serif">Canvas Labs in the press.</h3>
     <div className="press-logos">
       <a href="https://www.ibtimes.com/inside-stanton-terranovas-canvas-labs-innovative-space-ideas-that-dont-fit-mold-3791873" target="_blank" className="press-logo-link">
-        <img src="https://www.canvaslabs.world/assets/ibt-fZIfWLI9.svg" alt="IBTimes" className="press-logo" style={{height: "18px"}} />
+        <img src={pressFeatured} alt="IBTimes" className="press-logo" />
       </a>
       <a href="https://www.villagevoice.com/how-a-new-england-farmer-became-a-builder-of-narrative-platforms-for-communities-seeking-clearer-digital-voices/" target="_blank" className="press-logo-link">
-        <img src="https://www.canvaslabs.world/assets/voice-DBT-hKiM.jpeg" alt="Village Voice" className="press-logo" />
+        <img src={pressVoice} alt="Village Voice" className="press-logo" />
       </a>
       <a href="https://www.flipsnack.com/menapublishinggroup/bizpreneur-middle-east-january-2026/full-view.html?p=124" target="_blank" className="press-logo-link">
-        <img src="https://www.canvaslabs.world/assets/biz-CSm9sO2x.jpeg" alt="Bizpreneur" className="press-logo" />
+        <img src={pressBiz} alt="Bizpreneur" className="press-logo" />
       </a>
       <a href="https://ceoweekly.com/from-law-to-systems-innovation-how-stanton-terranova-built-a-life-and-business-around-earned-independence/" target="_blank" className="press-logo-link">
-        <img src="https://www.canvaslabs.world/assets/ceo-DDkZ3G0K.png" alt="CEO Weekly" className="press-logo" />
+        <img src={pressCeo} alt="CEO Weekly" className="press-logo" />
       </a>
       <a href="https://www.yglf.org/leadership-team" target="_blank" className="press-logo-link">
-        <img src="https://www.canvaslabs.world/assets/yglf-CsEhZdEa.avif" alt="YGLF" className="press-logo" style={{height: "34px"}} />
+        <img src={pressYglf} alt="YGLF" className="press-logo" />
       </a>
     </div>
   </div>
@@ -555,15 +571,15 @@ export default function CanvasLabsLanding() {
         <div className="form-title">Request a consultation</div>
         <form onSubmit={onFormSubmit}>
           <div className="form-grid">
-            <div className="form-row"><label>Name</label><input type="text" placeholder="Your full name" required /></div>
-            <div className="form-row"><label>Email</label><input type="email" placeholder="you@example.com" required /></div>
-            <div className="form-row form-full"><label>Organization</label><input type="text" placeholder="Your organization" /></div>
-            <div className="form-row"><label>Project type</label><div className="select-wrap"><select required defaultValue=""><option value="" disabled>Select type</option><option>Custom Development</option><option>AI Production</option><option>Campaign Tools</option><option>Consulting</option><option>White Label / Licensing</option><option>Other</option></select></div></div>
-            <div className="form-row"><label>Budget range</label><div className="select-wrap"><select required defaultValue=""><option value="" disabled>Select range</option><option>Under $50K</option><option>$50K – $100K</option><option>$100K – $500K</option><option>$500K+</option></select></div></div>
-            <div className="form-row form-full"><label>Timeline</label><div className="select-wrap"><select required defaultValue=""><option value="" disabled>Select timeline</option><option>Under 3 months</option><option>3 – 6 months</option><option>6 – 12 months</option><option>12+ months</option></select></div></div>
+            <div className="form-row"><label>Name</label><input name="name" type="text" placeholder="Your full name" required /></div>
+            <div className="form-row"><label>Email</label><input name="email" type="email" placeholder="you@example.com" required /></div>
+            <div className="form-row form-full"><label>Organization</label><input name="organization" type="text" placeholder="Your organization" /></div>
+            <div className="form-row"><label>Project type</label><div className="select-wrap"><select name="project_type" required defaultValue=""><option value="" disabled>Select type</option><option>Custom Development</option><option>AI Production</option><option>Campaign Tools</option><option>Consulting</option><option>White Label / Licensing</option><option>Other</option></select></div></div>
+            <div className="form-row"><label>Budget range</label><div className="select-wrap"><select name="budget" required defaultValue=""><option value="" disabled>Select range</option><option>Under $50K</option><option>$50K – $100K</option><option>$100K – $500K</option><option>$500K+</option></select></div></div>
+            <div className="form-row form-full"><label>Timeline</label><div className="select-wrap"><select name="timeline" required defaultValue=""><option value="" disabled>Select timeline</option><option>Under 3 months</option><option>3 – 6 months</option><option>6 – 12 months</option><option>12+ months</option></select></div></div>
             <div className="form-row form-full">
               <label>Project description</label>
-              <textarea placeholder="Tell us what you're looking to build..." />
+              <textarea name="description" placeholder="Tell us what you're looking to build..." />
             </div>
           </div>
           <button type="submit" className="form-submit">{submitLabel}</button>
