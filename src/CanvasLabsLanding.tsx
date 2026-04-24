@@ -512,7 +512,7 @@ export default function CanvasLabsLanding() {
           <div className="port-body">
             <div className="port-meta"><span>No. 08</span><span className="port-meta-sep" /><span>Enterprise Solutions</span></div>
             <h3 className="port-name">Dasmore Solutions</h3>
-            <p className="port-desc">End-to-end enterprise software powering organizations with scalable digital infrastructure.</p>
+            <p className="port-desc">Innovative water filtration systems targeting PFAS and heavy metal removal.</p>
             <dl className="port-specs">
               <div><dt>Client</dt><dd>Dasmore</dd></div>
               <div><dt>Visit</dt><dd><a href="https://www.dasmoresolutions.com/" target="_blank">dasmoresolutions.com ↗</a></dd></div>
